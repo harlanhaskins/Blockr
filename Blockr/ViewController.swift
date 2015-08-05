@@ -12,15 +12,7 @@ import SafariServices
 class ViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBOutlet weak var textView: UITextView!
 
     @IBAction func loadHosts(sender: UIButton) {
         activityIndicator.startAnimating()
@@ -43,8 +35,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    @IBOutlet weak var textView: UITextView!
     
 }
 
