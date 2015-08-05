@@ -14,6 +14,10 @@
 		DCF0473E1B71643700A4F83D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF0473C1B71643700A4F83D /* LaunchScreen.storyboard */; };
 		DCF047491B71643800A4F83D /* BlockrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF047481B71643800A4F83D /* BlockrTests.swift */; };
 		DCF047541B71643800A4F83D /* BlockrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF047531B71643800A4F83D /* BlockrUITests.swift */; };
+		DCF047681B71645000A4F83D /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = DCF047671B71645000A4F83D /* blockerList.json */; };
+		DCF0476A1B71645000A4F83D /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF047691B71645000A4F83D /* ActionRequestHandler.swift */; };
+		DCF0476E1B71645000A4F83D /* Blockr Content Blocking Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DCF047651B71645000A4F83D /* Blockr Content Blocking Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DCF047761B724D5100A4F83D /* HostsProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF047751B724D5100A4F83D /* HostsProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +35,28 @@
 			remoteGlobalIDString = DCF0472F1B71643700A4F83D;
 			remoteInfo = Blockr;
 		};
+		DCF0476C1B71645000A4F83D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCF047281B71643700A4F83D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCF047641B71645000A4F83D;
+			remoteInfo = "Blockr Content Blocking Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DCF047721B71645000A4F83D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DCF0476E1B71645000A4F83D /* Blockr Content Blocking Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DCF047301B71643700A4F83D /* Blockr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blockr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +72,13 @@
 		DCF0474F1B71643800A4F83D /* BlockrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF047531B71643800A4F83D /* BlockrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockrUITests.swift; sourceTree = "<group>"; };
 		DCF047551B71643800A4F83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF047651B71645000A4F83D /* Blockr Content Blocking Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Blockr Content Blocking Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF047671B71645000A4F83D /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		DCF047691B71645000A4F83D /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
+		DCF0476B1B71645000A4F83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF047731B716C3200A4F83D /* Blockr Content Blocking Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Blockr Content Blocking Extension.entitlements"; sourceTree = "<group>"; };
+		DCF047741B716C8300A4F83D /* Blockr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Blockr.entitlements; sourceTree = "<group>"; };
+		DCF047751B724D5100A4F83D /* HostsProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostsProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +103,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCF047621B71645000A4F83D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +119,7 @@
 				DCF047321B71643700A4F83D /* Blockr */,
 				DCF047471B71643800A4F83D /* BlockrTests */,
 				DCF047521B71643800A4F83D /* BlockrUITests */,
+				DCF047661B71645000A4F83D /* Blockr Content Blocking Extension */,
 				DCF047311B71643700A4F83D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +130,7 @@
 				DCF047301B71643700A4F83D /* Blockr.app */,
 				DCF047441B71643800A4F83D /* BlockrTests.xctest */,
 				DCF0474F1B71643800A4F83D /* BlockrUITests.xctest */,
+				DCF047651B71645000A4F83D /* Blockr Content Blocking Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,8 +138,10 @@
 		DCF047321B71643700A4F83D /* Blockr */ = {
 			isa = PBXGroup;
 			children = (
+				DCF047741B716C8300A4F83D /* Blockr.entitlements */,
 				DCF047331B71643700A4F83D /* AppDelegate.swift */,
 				DCF047351B71643700A4F83D /* ViewController.swift */,
+				DCF047751B724D5100A4F83D /* HostsProcessor.swift */,
 				DCF047371B71643700A4F83D /* Main.storyboard */,
 				DCF0473A1B71643700A4F83D /* Assets.xcassets */,
 				DCF0473C1B71643700A4F83D /* LaunchScreen.storyboard */,
@@ -125,6 +168,17 @@
 			path = BlockrUITests;
 			sourceTree = "<group>";
 		};
+		DCF047661B71645000A4F83D /* Blockr Content Blocking Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DCF047731B716C3200A4F83D /* Blockr Content Blocking Extension.entitlements */,
+				DCF047671B71645000A4F83D /* blockerList.json */,
+				DCF047691B71645000A4F83D /* ActionRequestHandler.swift */,
+				DCF0476B1B71645000A4F83D /* Info.plist */,
+			);
+			path = "Blockr Content Blocking Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +189,12 @@
 				DCF0472C1B71643700A4F83D /* Sources */,
 				DCF0472D1B71643700A4F83D /* Frameworks */,
 				DCF0472E1B71643700A4F83D /* Resources */,
+				DCF047721B71645000A4F83D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DCF0476D1B71645000A4F83D /* PBXTargetDependency */,
 			);
 			name = Blockr;
 			productName = Blockr;
@@ -181,6 +237,23 @@
 			productReference = DCF0474F1B71643800A4F83D /* BlockrUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		DCF047641B71645000A4F83D /* Blockr Content Blocking Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF0476F1B71645000A4F83D /* Build configuration list for PBXNativeTarget "Blockr Content Blocking Extension" */;
+			buildPhases = (
+				DCF047611B71645000A4F83D /* Sources */,
+				DCF047621B71645000A4F83D /* Frameworks */,
+				DCF047631B71645000A4F83D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blockr Content Blocking Extension";
+			productName = "Blockr Content Blocking Extension";
+			productReference = DCF047651B71645000A4F83D /* Blockr Content Blocking Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,6 +265,12 @@
 				TargetAttributes = {
 					DCF0472F1B71643700A4F83D = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = W7GJMYD5A4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					DCF047431B71643800A4F83D = {
 						CreatedOnToolsVersion = 7.0;
@@ -200,6 +279,15 @@
 					DCF0474E1B71643800A4F83D = {
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = DCF0472F1B71643700A4F83D;
+					};
+					DCF047641B71645000A4F83D = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = W7GJMYD5A4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -219,6 +307,7 @@
 				DCF0472F1B71643700A4F83D /* Blockr */,
 				DCF047431B71643800A4F83D /* BlockrTests */,
 				DCF0474E1B71643800A4F83D /* BlockrUITests */,
+				DCF047641B71645000A4F83D /* Blockr Content Blocking Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +337,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCF047631B71645000A4F83D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF047681B71645000A4F83D /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,6 +354,7 @@
 			files = (
 				DCF047361B71643700A4F83D /* ViewController.swift in Sources */,
 				DCF047341B71643700A4F83D /* AppDelegate.swift in Sources */,
+				DCF047761B724D5100A4F83D /* HostsProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +374,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCF047611B71645000A4F83D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF0476A1B71645000A4F83D /* ActionRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,6 +394,11 @@
 			isa = PBXTargetDependency;
 			target = DCF0472F1B71643700A4F83D /* Blockr */;
 			targetProxy = DCF047501B71643800A4F83D /* PBXContainerItemProxy */;
+		};
+		DCF0476D1B71645000A4F83D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCF047641B71645000A4F83D /* Blockr Content Blocking Extension */;
+			targetProxy = DCF0476C1B71645000A4F83D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -398,10 +509,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Blockr/Blockr.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Blockr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.harlan.Blockr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harlan.block;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -409,10 +525,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Blockr/Blockr.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Blockr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.harlan.Blockr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harlan.block;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -464,6 +585,36 @@
 			};
 			name = Release;
 		};
+		DCF047701B71645000A4F83D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Blockr Content Blocking Extension/Blockr Content Blocking Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Blockr Content Blocking Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harlan.block.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DCF047711B71645000A4F83D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Blockr Content Blocking Extension/Blockr Content Blocking Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Blockr Content Blocking Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harlan.block.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -497,6 +648,14 @@
 			buildConfigurations = (
 				DCF0475F1B71643800A4F83D /* Debug */,
 				DCF047601B71643800A4F83D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCF0476F1B71645000A4F83D /* Build configuration list for PBXNativeTarget "Blockr Content Blocking Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF047701B71645000A4F83D /* Debug */,
+				DCF047711B71645000A4F83D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A226f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blockr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blockr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ck-uf-rgN">
+                                <rect key="frame" x="205" y="70" width="191" height="77"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1R-gW-pII">
+                                <rect key="frame" x="277" y="182" width="47" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="loadHosts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2N-Z8-PEx"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYz-Md-ZOi">
+                                <rect key="frame" x="20" y="212" width="560" height="389"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ViG-kC-ku9">
+                                <rect key="frame" x="332" y="187" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ViG-kC-ku9" firstAttribute="centerY" secondItem="b1R-gW-pII" secondAttribute="centerY" id="6C1-61-jPU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xYz-Md-ZOi" secondAttribute="bottom" id="8aQ-9Y-dyX"/>
+                            <constraint firstItem="3ck-uf-rgN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8hS-TM-n3E"/>
+                            <constraint firstItem="3ck-uf-rgN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="CDC-7S-mDN"/>
+                            <constraint firstItem="xYz-Md-ZOi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Gxf-1T-d2a"/>
+                            <constraint firstItem="b1R-gW-pII" firstAttribute="top" secondItem="3ck-uf-rgN" secondAttribute="bottom" constant="35" id="Ojt-C8-09U"/>
+                            <constraint firstItem="ViG-kC-ku9" firstAttribute="leading" secondItem="b1R-gW-pII" secondAttribute="trailing" constant="8" id="QEo-CD-mmO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xYz-Md-ZOi" secondAttribute="trailing" id="VJr-4P-R72"/>
+                            <constraint firstItem="b1R-gW-pII" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VtJ-cE-zbY"/>
+                            <constraint firstItem="xYz-Md-ZOi" firstAttribute="top" secondItem="b1R-gW-pII" secondAttribute="bottom" id="pfk-Hi-yGp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ViG-kC-ku9" id="POZ-Z4-nQm"/>
+                        <outlet property="textView" destination="xYz-Md-ZOi" id="DZc-6v-Ahp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
